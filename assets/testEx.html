@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
+
+    <style>
+        #y{
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" id="myform">
+        <div class="div">
+        <!-- <input type="text" id="h"> -->
+        </div>
+
+    <button type="submit" id="add-semester">submit</button>
+    </form>
+
+    <span id="y">....</span> <br>
+
+    <button onclick="x()">click</button>
+
+
+    <script>
+
+        function x(){
+        var x;
+
+
+
+        for(x=0; x<5; x++){
+
+            $(".div").append("<div class='d'><input type='text' id='null' value='"+x+"'></div>");
+            // alert(x);
+        }
+
+    }
+
+    $('body').on('click', '#add-semester', function(e) {
+        let v;
+        v=document.getElementById('null').value;
+        alert(v);
+    });
+    </script>
+</body>
+</html>

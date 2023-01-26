@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bgHeader: linear-gradient(to right, rgb(14 152 218),#117ecc91);
+}
+
+body{
+    font-family: sans-serif;
+
+}
+
+.index #nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.index .navbar{
+    background-image: var(--bgHeader);
+    /* height: 800px; */
+}
+
+.index .navbar-brand img{
+    height: 80px;
+    padding-left: 80px;
+}
+
+.index .navbar-nav li{
+    padding: 0 10px;
+}
+
+.index.navbar-nav li a{
+  color: #fff !important;
+  font-weight: 600;
+  float: right;
+  text-align: left;
+}
+
+.index .fa-bars{
+    font-size: 30px;
+    color: #fff;
+}
+
+.index .navbar-toggler{
+    outline: none !important;
+    border: none;
+}
+
+.index .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+/* ================= banner section=============== */
+
+.index #banner{
+    background-image: var(--bgHeader);
+    color: #fff;
+    padding-top: 5%;
+}
+
+.index .promo-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.index .play-btn{
+    width: 45px;
+    margin: 20px;
+}
+
+.index #banner a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.index .bottom-img{
+    width: 100%;
+}
+
+/* login page start/////////////////
+////////////start ///////////////// */
+
+.login_page{
+    background: var(--bgHeader);
+}
+
+.login_page .loginForm .form-title{
+    justify-content: center;
+    margin-top: 100px;
+    background-color: rgb(0 150 136 / 78%);
+    color: #eee;
+    padding: 2rem;
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    font-weight: 700;
+
+} 
+
+.login_page .loginForm .form-title p{
+    margin-bottom: 0;
+    font-size: 2rem;
+
+}
+
+.login_page .loginForm form{
+
+    background: transparent;
+    background-color: #eee;
+    padding: 0 20px 20px 20px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+    
+}
+
+
+
+
+.login_page .loginForm form .form-group{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.login_page .loginForm form input.form-control{
+    background: transparent;
+    border-radius: 0px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.login_page .loginForm form label{
+    padding: 10px 0;
+}
+
+
+
+
+/* login page end/////////////////
+//////////// end ///////////////// */
+
+
+/* student header start //////
+///////////////////////////// */
+
+.student-navbar  img{
+    height: 80px;
+  }
+
+  .student-navbar ul li.nav-item{
+    margin-left: 50px;
+  }
+
+  .student-navbar ul li {
+      
+  }
+
+  .student-navbar ul li a{
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+  }
+
+
+
+  @media (max-width: 992px){
+
+    .student-navbar .navbar-nav {
+    flex-direction: row;
+    }
+
+    .student-navbar .dropdown-menu{
+      position: absolute;
+    }
+
+  }
+
+  /* student dashboard end /////////////////
+  /////////////////////////////////////// */
+
+
+  /* dashboard page start/////////////////
+//////////// start ///////////////// */
+
+.dashboard_page, .profile_page{
+    background: var(--bgHeader);
+}
+
+
+
+/* dashbaord end //////
+///////////////////////////// */
