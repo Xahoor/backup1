@@ -9,6 +9,9 @@
   #banner{
     height: 92vh;
   }
+  body{
+    overflow-y: hidden;
+  }
 </style>
 
 <?php

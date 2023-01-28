@@ -48,7 +48,7 @@
           </div>
 
           <div class="form-group" id="for-invalid">
-            <label for="user">Email</label>
+            <label for="user" id="lable-user">User Name or Email</label>
             <input type="text" name="email" id="user" class="form-control" autofocus>
           </div>
           <div class="form-group">
@@ -62,7 +62,8 @@
           </div>
           <div class="form-group text-end">
             
-            <input type="submit" id="admin-login" class="btn btn-success" value="Login">
+            <!-- <input type="submit" id="admin-login" class="btn btn-success" value="Login"> -->
+            <button type="button" class="btn btn-success" id="admin-login">Login</button>
             <!-- <a href="dashboard.php" class="btn btn-success">Login</a> -->
 
           </div>
@@ -83,18 +84,24 @@
 
     let email = $("#user").val();
     let password = $("#login-password").val();
+    if(email==""){
+      alert('Email required');
+    }if(password==""){
+      alert("Passowrd required");
+    }
 
+    if(email!="" && password!=""){
     $.ajax({
-      url: "../include/do-login.php",
+      url: "admin/include/do-login.php",
       type: "POST",
-      data: {type: 1, user_id: email, password: password},
+      data: {type: 1, email: email, password: password},
       success: function(response){
         // var res= JSON.parse(JSON.stringify(response));
          let res= JSON.parse(response);
 
         if(res.statusCode==200){
           $('#invalid').css('visibility','hidden');
-          window.location.href ='../admin/dashboard.php';
+          window.location.href ='admin/index.php';
         }
           // alert('faile');
           else{
@@ -103,6 +110,9 @@
         
       }
     });
+  }
+
+
   });
 
   function showPassword() {

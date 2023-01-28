@@ -1,4 +1,16 @@
 <?php 
+
+session_start();
+if(!isset($_SESSION['admin'])){
+  header('location: ../alogin.php');
+
+}
+
+include_once "config/db.php";
+// include_once "include/core.php";
+// $admin = new core($conn);
+
+
   $page_title = 'Administration';
   $body_class= 'index';
   require 'head.php';
